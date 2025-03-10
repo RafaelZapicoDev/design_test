@@ -11,13 +11,25 @@ class TopBar extends StatelessWidget {
       child: Row(
         children: [
           Expanded(
-              flex: 1,
-              child: Text(
-                "Hakuna Matata",
-                style: TextStyle(
+              flex: 2,
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.spa,
                     color: Colors.white,
-                    decoration: TextDecoration.none,
-                    fontSize: 30),
+                    size: 30,
+                  ),
+                  SizedBox(
+                    width: 15,
+                  ),
+                  Text(
+                    "Garden of Eden",
+                    style: TextStyle(
+                        color: Colors.white,
+                        decoration: TextDecoration.none,
+                        fontSize: 30),
+                  ),
+                ],
               )),
           Expanded(
             flex: 6,
