@@ -19,7 +19,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Design Test',
+      title: 'Amwal Smart Manager',
       home: Standart(),
     );
   }

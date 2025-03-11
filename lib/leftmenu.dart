@@ -78,9 +78,6 @@ class LeftMenu extends StatelessWidget {
           ),
         ),
       ),
-      SizedBox(
-        height: 10,
-      )
     ]);
   }
 

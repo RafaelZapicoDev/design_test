@@ -1,4 +1,5 @@
 import 'package:design_test/FiltersTab.dart';
+import 'package:design_test/bottombar.dart';
 import 'package:design_test/dashboard.dart';
 import 'package:design_test/leftmenu.dart';
 import 'package:design_test/topbar.dart';
@@ -18,7 +19,7 @@ class Standart extends StatelessWidget {
             child: TopBar(),
           ),
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.925,
+            height: MediaQuery.of(context).size.height * 0.875,
             child: Container(
               padding: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
               color: const Color.fromARGB(255, 229, 232, 243),
@@ -40,6 +41,10 @@ class Standart extends StatelessWidget {
                 ],
               ),
             ),
+          ),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.050,
+            child: BottomBar(),
           ),
         ],
       ),

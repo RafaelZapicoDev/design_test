@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class TopBar extends StatelessWidget {
-  const TopBar({super.key});
+class BottomBar extends StatelessWidget {
+  const BottomBar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,16 +14,8 @@ class TopBar extends StatelessWidget {
               flex: 2,
               child: Row(
                 children: [
-                  Icon(
-                    Icons.spa,
-                    color: Colors.white,
-                    size: 30,
-                  ),
-                  SizedBox(
-                    width: 15,
-                  ),
                   Text(
-                    "ASM",
+                    "Amwal Smart Manager",
                     style: TextStyle(
                         color: Colors.white,
                         decoration: TextDecoration.none,
@@ -38,41 +30,16 @@ class TopBar extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Text(
-                      "Amwal Cart",
-                      style: TextStyle(
-                          color: Colors.white,
-                          decoration: TextDecoration.none,
-                          fontSize: 15),
-                    ),
-                    SizedBox(
-                      width: 15,
-                    ),
                     Icon(
-                      Icons.shopping_cart_rounded,
+                      Icons.history,
                       color: Colors.white,
                       size: 25,
                     ),
-                  ],
-                ),
-                Padding(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
-                  child: VerticalDivider(
-                    color: const Color.fromARGB(209, 67, 132, 194),
-                    thickness: 2,
-                  ),
-                ),
-                Row(
-                  children: [
-                    Material(
-                        color: Colors.transparent,
-                        child: Switch(value: true, onChanged: null)),
                     SizedBox(
                       width: 15,
                     ),
                     Text(
-                      "Automação",
+                      "Histórico",
                       style: TextStyle(
                           color: Colors.white,
                           decoration: TextDecoration.none,
@@ -91,7 +58,7 @@ class TopBar extends StatelessWidget {
                 Row(
                   children: [
                     Text(
-                      "Configurações",
+                      "Calendário",
                       style: TextStyle(
                           color: Colors.white,
                           decoration: TextDecoration.none,
@@ -101,7 +68,7 @@ class TopBar extends StatelessWidget {
                       width: 15,
                     ),
                     Icon(
-                      Icons.settings,
+                      Icons.calendar_month,
                       color: Colors.white,
                       size: 25,
                     ),
@@ -118,7 +85,7 @@ class TopBar extends StatelessWidget {
                 Row(
                   children: [
                     Icon(
-                      Icons.light_mode,
+                      Icons.link,
                       color: Colors.white,
                       size: 25,
                     ),
@@ -126,7 +93,7 @@ class TopBar extends StatelessWidget {
                       width: 15,
                     ),
                     Icon(
-                      Icons.accessibility_new,
+                      Icons.notifications_rounded,
                       color: Colors.white,
                       size: 25,
                     ),
@@ -143,7 +110,7 @@ class TopBar extends StatelessWidget {
                 Row(
                   children: [
                     Icon(
-                      Icons.person,
+                      Icons.add,
                       color: Colors.white,
                       size: 25,
                     ),
@@ -151,7 +118,7 @@ class TopBar extends StatelessWidget {
                       width: 15,
                     ),
                     Text(
-                      "Colaborador",
+                      "Nova Aba",
                       style: TextStyle(
                           color: Colors.white,
                           decoration: TextDecoration.none,
