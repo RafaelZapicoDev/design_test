@@ -39,7 +39,7 @@ class TopBar extends StatelessWidget {
                 Row(
                   children: [
                     Text(
-                      "Amwal Cart",
+                      "Amwal Store",
                       style: TextStyle(
                           color: Colors.white,
                           decoration: TextDecoration.none,
