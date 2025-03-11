@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class ThemeProvider with ChangeNotifier {
   final Map<String, Color> _defaultTheme = {
-    'main1': Color.fromARGB(255, 82, 140, 226),
+    'main1': Color.fromARGB(255, 66, 72, 82),
+    //adicionar cor de tema para letras e icones
     'contentbackground': Color.fromARGB(255, 255, 255, 255),
     'companyname': Color.fromARGB(157, 97, 121, 136),
     'background': const Color.fromARGB(255, 229, 232, 243),
