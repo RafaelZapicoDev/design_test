@@ -5,6 +5,7 @@ class ThemeProvider with ChangeNotifier {
     'main1': Color.fromARGB(255, 82, 140, 226),
     'contentbackground': Color.fromARGB(255, 255, 255, 255),
     'companyname': Color.fromARGB(157, 97, 121, 136),
+    'background': const Color.fromARGB(255, 229, 232, 243),
     'grey1': Color.fromARGB(157, 112, 137, 153),
     'grey2': Color.fromARGB(255, 229, 232, 243),
   };

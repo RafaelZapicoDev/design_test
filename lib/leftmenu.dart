@@ -78,7 +78,7 @@ class LeftMenu extends StatelessWidget {
                 child: Text(
                   "© Empresa X de Xícara . ",
                   style: TextStyle(
-                      color: const Color.fromARGB(157, 97, 121, 136),
+                      color: theme['grey1'],
                       decoration: TextDecoration.none,
                       fontWeight: FontWeight.w500,
                       fontSize: 16),

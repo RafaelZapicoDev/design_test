@@ -33,7 +33,9 @@ class Dashboard extends StatelessWidget {
               DashboardTopBar(),
               Padding(
                 padding: const EdgeInsets.only(left: 20, right: 20, top: 8),
-                child: Divider(),
+                child: Divider(
+                  color: theme['grey2'],
+                ),
               ),
               Expanded(
                 flex: 9,

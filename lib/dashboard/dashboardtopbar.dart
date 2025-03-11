@@ -70,7 +70,7 @@ class DashboardTopBar extends StatelessWidget {
                         width: 120,
                         height: 40,
                         decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 226, 233, 238),
+                          color: theme['grey2'],
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Align(
@@ -79,8 +79,7 @@ class DashboardTopBar extends StatelessWidget {
                               "Resumo",
                               style: TextStyle(
                                   fontSize: 20,
-                                  color:
-                                      const Color.fromARGB(157, 97, 121, 136),
+                                  color: theme['grey1'],
                                   decoration: TextDecoration.none),
                             )),
                       ),
@@ -91,7 +90,7 @@ class DashboardTopBar extends StatelessWidget {
                         width: 120,
                         height: 40,
                         decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 226, 233, 238),
+                          color: theme['grey2'],
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Align(
@@ -100,8 +99,7 @@ class DashboardTopBar extends StatelessWidget {
                               "Insights",
                               style: TextStyle(
                                   fontSize: 20,
-                                  color:
-                                      const Color.fromARGB(157, 112, 137, 153),
+                                  color: theme['grey1'],
                                   decoration: TextDecoration.none),
                             )),
                       ),
@@ -110,7 +108,7 @@ class DashboardTopBar extends StatelessWidget {
                       ),
                       Icon(
                         Icons.more_vert,
-                        color: const Color.fromARGB(157, 112, 137, 153),
+                        color: theme['grey1'],
                         size: 35,
                       ),
                     ],
@@ -126,7 +124,7 @@ class DashboardTopBar extends StatelessWidget {
                         width: 300,
                         height: 40,
                         decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 226, 233, 238),
+                          color: theme['grey2'],
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Padding(
@@ -136,7 +134,7 @@ class DashboardTopBar extends StatelessWidget {
                               child: Icon(
                                 Icons.search,
                                 size: 30,
-                                color: const Color.fromARGB(157, 112, 137, 153),
+                                color: theme['grey1'],
                               )),
                         ),
                       ),
@@ -146,7 +144,7 @@ class DashboardTopBar extends StatelessWidget {
                       Icon(
                         Icons.filter_alt,
                         size: 35,
-                        color: const Color.fromARGB(157, 112, 137, 153),
+                        color: theme['grey1'],
                       ),
                       SizedBox(
                         width: 10,
@@ -154,7 +152,7 @@ class DashboardTopBar extends StatelessWidget {
                       Icon(
                         Icons.refresh,
                         size: 35,
-                        color: const Color.fromARGB(157, 112, 137, 153),
+                        color: theme['grey1'],
                       ),
                     ],
                   ),
