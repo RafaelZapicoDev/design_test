@@ -1,6 +1,6 @@
-import 'package:design_test/FiltersTab.dart';
 import 'package:design_test/bottombar.dart';
-import 'package:design_test/dashboard.dart';
+import 'package:design_test/dashboard/dashboard.dart';
+import 'package:design_test/filtersTab.dart';
 import 'package:design_test/leftmenu.dart';
 import 'package:design_test/topbar.dart';
 import 'package:flutter/material.dart';

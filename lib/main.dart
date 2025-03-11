@@ -1,15 +1,15 @@
-import 'package:design_test/mainprovider.dart';
+import 'package:design_test/providers/themeprovider.dart';
 import 'package:design_test/standart.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  runApp(
-    ChangeNotifierProvider(
-      create: (context) => MainProvider(),
-      child: MainApp(),
-    ),
-  );
+  runApp(MultiProvider(
+    providers: [
+      ChangeNotifierProvider(create: (_) => ThemeProvider()),
+    ],
+    child: MainApp(),
+  ));
 }
 
 class MainApp extends StatelessWidget {
