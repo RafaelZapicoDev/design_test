@@ -1,4 +1,5 @@
 import 'package:design_test/providers/themeprovider.dart';
+import 'package:design_test/providers/uiprovider.dart';
 import 'package:design_test/standart.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -7,6 +8,7 @@ void main() {
   runApp(MultiProvider(
     providers: [
       ChangeNotifierProvider(create: (_) => ThemeProvider()),
+      ChangeNotifierProvider(create: (_) => UiProvider()),
     ],
     child: MainApp(),
   ));

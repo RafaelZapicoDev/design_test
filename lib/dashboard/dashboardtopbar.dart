@@ -1,4 +1,5 @@
 import 'package:design_test/providers/themeprovider.dart';
+import 'package:design_test/providers/uiprovider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -36,7 +37,7 @@ class DashboardTopBar extends StatelessWidget {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           border: Border.fromBorderSide(
-                            BorderSide(color: theme['main2']!, width: 2),
+                            BorderSide(color: theme['foreground2']!, width: 2),
                           ),
                         ),
                         child: Row(
@@ -48,7 +49,7 @@ class DashboardTopBar extends StatelessWidget {
                             Icon(
                               Icons.add_outlined,
                               size: 30,
-                              color: theme['main2'],
+                              color: theme['foreground2'],
                             ),
                             SizedBox(
                               width: 5,
@@ -57,7 +58,7 @@ class DashboardTopBar extends StatelessWidget {
                               "Novo Item",
                               style: TextStyle(
                                   fontSize: 20,
-                                  color: theme['main2'],
+                                  color: theme['foreground2'],
                                   decoration: TextDecoration.none),
                             ),
                           ],
@@ -70,7 +71,7 @@ class DashboardTopBar extends StatelessWidget {
                         width: 120,
                         height: 40,
                         decoration: BoxDecoration(
-                          color: theme['grey2'],
+                          color: theme['background3'],
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Align(
@@ -79,7 +80,7 @@ class DashboardTopBar extends StatelessWidget {
                               "Resumo",
                               style: TextStyle(
                                   fontSize: 20,
-                                  color: theme['grey1'],
+                                  color: theme['foreground3'],
                                   decoration: TextDecoration.none),
                             )),
                       ),
@@ -90,7 +91,7 @@ class DashboardTopBar extends StatelessWidget {
                         width: 120,
                         height: 40,
                         decoration: BoxDecoration(
-                          color: theme['grey2'],
+                          color: theme['background3'],
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Align(
@@ -99,7 +100,7 @@ class DashboardTopBar extends StatelessWidget {
                               "Insights",
                               style: TextStyle(
                                   fontSize: 20,
-                                  color: theme['grey1'],
+                                  color: theme['foreground3'],
                                   decoration: TextDecoration.none),
                             )),
                       ),
@@ -108,7 +109,7 @@ class DashboardTopBar extends StatelessWidget {
                       ),
                       Icon(
                         Icons.more_vert,
-                        color: theme['grey1'],
+                        color: theme['foreground3'],
                         size: 35,
                       ),
                     ],
@@ -124,7 +125,7 @@ class DashboardTopBar extends StatelessWidget {
                         width: 300,
                         height: 40,
                         decoration: BoxDecoration(
-                          color: theme['grey2'],
+                          color: theme['background3'],
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Padding(
@@ -134,17 +135,26 @@ class DashboardTopBar extends StatelessWidget {
                               child: Icon(
                                 Icons.search,
                                 size: 30,
-                                color: theme['grey1'],
+                                color: theme['foreground3'],
                               )),
                         ),
                       ),
                       SizedBox(
                         width: 20,
                       ),
-                      Icon(
-                        Icons.filter_alt,
-                        size: 35,
-                        color: theme['grey1'],
+                      Consumer<UiProvider>(
+                        builder: (context, uiprovider, child) {
+                          return GestureDetector(
+                            onTap: () => uiprovider.toggleFilterVisibility(),
+                            child: Icon(
+                              uiprovider.getfiltersVisibility
+                                  ? Icons.filter_alt_off
+                                  : Icons.filter_alt,
+                              size: 35,
+                              color: theme['foreground3'],
+                            ),
+                          );
+                        },
                       ),
                       SizedBox(
                         width: 10,
@@ -152,7 +162,7 @@ class DashboardTopBar extends StatelessWidget {
                       Icon(
                         Icons.refresh,
                         size: 35,
-                        color: theme['grey1'],
+                        color: theme['foreground3'],
                       ),
                     ],
                   ),

@@ -40,7 +40,7 @@ class LeftMenu extends StatelessWidget {
                         ),
                       ),
                     ],
-                    color: theme['main1'],
+                    color: theme['main'],
                   ),
                   child: Align(
                     alignment: Alignment.center,
@@ -78,7 +78,7 @@ class LeftMenu extends StatelessWidget {
                 child: Text(
                   "© Empresa X de Xícara . ",
                   style: TextStyle(
-                      color: theme['grey1'],
+                      color: theme['foreground3'],
                       decoration: TextDecoration.none,
                       fontWeight: FontWeight.w500,
                       fontSize: 16),
@@ -113,7 +113,7 @@ class LeftMenu extends StatelessWidget {
                     ),
                   ),
                 ],
-                color: theme['contentbackground'],
+                color: theme['background2'],
               ),
               child: Align(
                 alignment: Alignment.center,
@@ -126,7 +126,7 @@ class LeftMenu extends StatelessWidget {
                     Text(
                       titulo,
                       style: TextStyle(
-                          color: theme['main2'],
+                          color: theme['foreground2'],
                           decoration: TextDecoration.none,
                           fontWeight: FontWeight.w500,
                           fontSize: 20),
@@ -136,7 +136,7 @@ class LeftMenu extends StatelessWidget {
                       alignment: Alignment.centerRight,
                       child: Icon(
                         Icons.keyboard_arrow_down_outlined,
-                        color: theme['main2'],
+                        color: theme['foreground2'],
                         size: 25,
                       ),
                     )),

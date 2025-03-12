@@ -2,27 +2,38 @@ import 'package:flutter/material.dart';
 
 class ThemeProvider with ChangeNotifier {
   final Map<String, Color> _defaultTheme = {
-    'main1': Color.fromARGB(255, 66, 72, 82),
-    //adicionar cor de tema para letras e icones
-    'contentbackground': Color.fromARGB(255, 255, 255, 255),
-    'companyname': Color.fromARGB(157, 97, 121, 136),
-    'background': const Color.fromARGB(255, 229, 232, 243),
-    'grey1': Color.fromARGB(157, 112, 137, 153),
-    'grey2': Color.fromARGB(255, 229, 232, 243),
+    'main': Color.fromARGB(255, 61, 123, 216),
+    'foreground1': Color.fromARGB(255, 255, 255, 255),
+    'foreground2': Color.fromARGB(180, 49, 95, 163),
+    'foreground3': Color.fromARGB(157, 112, 137, 153),
+    'foreground4': Color.fromARGB(99, 56, 101, 168),
+    'background1': Color.fromARGB(255, 235, 236, 241),
+    'background2': Color.fromARGB(255, 255, 255, 255),
+    'background3': Color.fromARGB(255, 229, 232, 243),
   };
 
-  Color get main2 {
-    Color main1 = _defaultTheme['main1']!;
-    return Color.fromARGB(
-      (main1.alpha - 75).clamp(0, 255),
-      (main1.red * 0.817).clamp(0, 255).round(),
-      (main1.green * 0.843).clamp(0, 255).round(),
-      (main1.blue * 0.858).clamp(0, 255).round(),
-    );
+  final Map<String, Color> _darkTheme = {
+    'main': Color.fromARGB(255, 53, 56, 63),
+    'foreground1': Color.fromARGB(255, 255, 255, 255),
+    'foreground2': Color.fromARGB(255, 189, 194, 204),
+    'foreground3': Color.fromARGB(255, 217, 220, 248),
+    'foreground4': Color.fromARGB(74, 94, 97, 110),
+    'background1': Color.fromARGB(255, 42, 42, 43),
+    'background2': Color.fromARGB(255, 53, 56, 63),
+    'background3': Color.fromARGB(255, 49, 51, 56),
+  };
+
+  late Map<String, Color> _selectedTheme = _defaultTheme;
+
+  void toggleTheme() {
+    _selectedTheme =
+        _selectedTheme == _defaultTheme ? _darkTheme : _defaultTheme;
+    _isDarkTheme = !_isDarkTheme;
+
+    notifyListeners();
   }
 
-  Map<String, Color> get getTheme => {
-        ..._defaultTheme,
-        'main2': main2,
-      };
+  bool _isDarkTheme = false;
+  bool get getIsDarkTheme => _isDarkTheme;
+  Map<String, Color> get getTheme => _selectedTheme;
 }

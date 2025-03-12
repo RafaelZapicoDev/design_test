@@ -12,7 +12,7 @@ class BottomBar extends StatelessWidget {
         Map<String, Color> theme = themeprovider.getTheme;
         return Container(
           padding: EdgeInsets.symmetric(horizontal: 20),
-          color: theme['main1'],
+          color: theme['main'],
           child: Row(
             children: [
               Expanded(
@@ -22,7 +22,7 @@ class BottomBar extends StatelessWidget {
                       Text(
                         "Amwal Smart Manager",
                         style: TextStyle(
-                            color: Colors.white,
+                            color: theme['foreground1'],
                             decoration: TextDecoration.none,
                             fontSize: 30),
                       ),
@@ -37,7 +37,7 @@ class BottomBar extends StatelessWidget {
                       children: [
                         Icon(
                           Icons.history,
-                          color: Colors.white,
+                          color: theme['foreground1'],
                           size: 25,
                         ),
                         SizedBox(
@@ -46,7 +46,7 @@ class BottomBar extends StatelessWidget {
                         Text(
                           "Histórico",
                           style: TextStyle(
-                              color: Colors.white,
+                              color: theme['foreground1'],
                               decoration: TextDecoration.none,
                               fontSize: 15),
                         ),
@@ -56,7 +56,7 @@ class BottomBar extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(
                           vertical: 10, horizontal: 15),
                       child: VerticalDivider(
-                        color: theme['main2'],
+                        color: theme['foreground4'],
                         thickness: 2,
                       ),
                     ),
@@ -65,7 +65,7 @@ class BottomBar extends StatelessWidget {
                         Text(
                           "Calendário",
                           style: TextStyle(
-                              color: Colors.white,
+                              color: theme['foreground1'],
                               decoration: TextDecoration.none,
                               fontSize: 15),
                         ),
@@ -74,7 +74,7 @@ class BottomBar extends StatelessWidget {
                         ),
                         Icon(
                           Icons.calendar_month,
-                          color: Colors.white,
+                          color: theme['foreground1'],
                           size: 25,
                         ),
                       ],
@@ -83,7 +83,7 @@ class BottomBar extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(
                           vertical: 10, horizontal: 15),
                       child: VerticalDivider(
-                        color: theme['main2'],
+                        color: theme['foreground4'],
                         thickness: 2,
                       ),
                     ),
@@ -91,7 +91,7 @@ class BottomBar extends StatelessWidget {
                       children: [
                         Icon(
                           Icons.link,
-                          color: Colors.white,
+                          color: theme['foreground1'],
                           size: 25,
                         ),
                         SizedBox(
@@ -99,7 +99,7 @@ class BottomBar extends StatelessWidget {
                         ),
                         Icon(
                           Icons.notifications_rounded,
-                          color: Colors.white,
+                          color: theme['foreground1'],
                           size: 25,
                         ),
                       ],
@@ -108,7 +108,7 @@ class BottomBar extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(
                           vertical: 10, horizontal: 15),
                       child: VerticalDivider(
-                        color: theme['main2'],
+                        color: theme['foreground4'],
                         thickness: 2,
                       ),
                     ),
@@ -116,7 +116,7 @@ class BottomBar extends StatelessWidget {
                       children: [
                         Icon(
                           Icons.add,
-                          color: Colors.white,
+                          color: theme['foreground1'],
                           size: 25,
                         ),
                         SizedBox(
@@ -125,7 +125,7 @@ class BottomBar extends StatelessWidget {
                         Text(
                           "Nova Aba",
                           style: TextStyle(
-                              color: Colors.white,
+                              color: theme['foreground1'],
                               decoration: TextDecoration.none,
                               fontSize: 15),
                         ),

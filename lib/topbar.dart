@@ -1,5 +1,6 @@
 import 'package:design_test/providers/themeprovider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:provider/provider.dart';
 
 class TopBar extends StatelessWidget {
@@ -13,7 +14,7 @@ class TopBar extends StatelessWidget {
         Map<String, Color> theme = themeProvider.getTheme;
         return Container(
           padding: EdgeInsets.symmetric(horizontal: 20),
-          color: theme['main1'],
+          color: theme['main'],
           child: Row(
             children: [
               Expanded(
@@ -22,7 +23,7 @@ class TopBar extends StatelessWidget {
                     children: [
                       Icon(
                         Icons.spa,
-                        color: Colors.white,
+                        color: theme['foreground1'],
                         size: 30,
                       ),
                       SizedBox(
@@ -31,7 +32,7 @@ class TopBar extends StatelessWidget {
                       Text(
                         "ASM",
                         style: TextStyle(
-                            color: Colors.white,
+                            color: theme['foreground1'],
                             decoration: TextDecoration.none,
                             fontSize: 30),
                       ),
@@ -47,7 +48,7 @@ class TopBar extends StatelessWidget {
                         Text(
                           "Insights",
                           style: TextStyle(
-                              color: Colors.white,
+                              color: theme['foreground1'],
                               decoration: TextDecoration.none,
                               fontSize: 15),
                         ),
@@ -56,7 +57,7 @@ class TopBar extends StatelessWidget {
                         ),
                         Icon(
                           Icons.insights_rounded,
-                          color: Colors.white,
+                          color: theme['foreground1'],
                           size: 25,
                         ),
                       ],
@@ -65,7 +66,7 @@ class TopBar extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(
                           vertical: 10, horizontal: 15),
                       child: VerticalDivider(
-                        color: theme['main2'],
+                        color: theme['foreground4'],
                         thickness: 2,
                       ),
                     ),
@@ -74,7 +75,7 @@ class TopBar extends StatelessWidget {
                         Text(
                           "Amwal Store",
                           style: TextStyle(
-                              color: Colors.white,
+                              color: theme['foreground1'],
                               decoration: TextDecoration.none,
                               fontSize: 15),
                         ),
@@ -83,7 +84,7 @@ class TopBar extends StatelessWidget {
                         ),
                         Icon(
                           Icons.shopping_cart_rounded,
-                          color: Colors.white,
+                          color: theme['foreground1'],
                           size: 25,
                         ),
                       ],
@@ -92,7 +93,7 @@ class TopBar extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(
                           vertical: 10, horizontal: 15),
                       child: VerticalDivider(
-                        color: theme['main2'],
+                        color: theme['foreground4'],
                         thickness: 2,
                       ),
                     ),
@@ -107,7 +108,7 @@ class TopBar extends StatelessWidget {
                         Text(
                           "Automação",
                           style: TextStyle(
-                              color: Colors.white,
+                              color: theme['foreground1'],
                               decoration: TextDecoration.none,
                               fontSize: 15),
                         ),
@@ -117,7 +118,7 @@ class TopBar extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(
                           vertical: 10, horizontal: 15),
                       child: VerticalDivider(
-                        color: theme['main2'],
+                        color: theme['foreground4'],
                         thickness: 2,
                       ),
                     ),
@@ -126,7 +127,7 @@ class TopBar extends StatelessWidget {
                         Text(
                           "Configurações",
                           style: TextStyle(
-                              color: Colors.white,
+                              color: theme['foreground1'],
                               decoration: TextDecoration.none,
                               fontSize: 15),
                         ),
@@ -135,7 +136,7 @@ class TopBar extends StatelessWidget {
                         ),
                         Icon(
                           Icons.settings,
-                          color: Colors.white,
+                          color: theme['foreground1'],
                           size: 25,
                         ),
                       ],
@@ -144,23 +145,34 @@ class TopBar extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(
                           vertical: 10, horizontal: 15),
                       child: VerticalDivider(
-                        color: theme['main2'],
+                        color: theme['foreground4'],
                         thickness: 2,
                       ),
                     ),
                     Row(
                       children: [
-                        Icon(
-                          Icons.light_mode,
-                          color: Colors.white,
-                          size: 25,
-                        ),
+                        GestureDetector(
+                            onTap: themeProvider.toggleTheme,
+                            child: Icon(
+                              themeProvider.getIsDarkTheme
+                                  ? Icons.dark_mode_outlined
+                                  : Icons.light_mode,
+                              color: theme['foreground1'],
+                              size: 25,
+                            )
+                            // .animate(
+                            //     target: themeProvider.getIsDarkTheme ? 1 : 0)
+                            // .rotate(
+                            //     delay: 100.ms,
+                            //     curve: Curves.fastOutSlowIn,
+                            //     duration: 1000.ms),
+                            ),
                         SizedBox(
                           width: 15,
                         ),
                         Icon(
                           Icons.accessibility_new,
-                          color: Colors.white,
+                          color: theme['foreground1'],
                           size: 25,
                         ),
                       ],
@@ -169,7 +181,7 @@ class TopBar extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(
                           vertical: 10, horizontal: 15),
                       child: VerticalDivider(
-                        color: theme['main2'],
+                        color: theme['foreground4'],
                         thickness: 2,
                       ),
                     ),
@@ -177,7 +189,7 @@ class TopBar extends StatelessWidget {
                       children: [
                         Icon(
                           Icons.person,
-                          color: Colors.white,
+                          color: theme['foreground1'],
                           size: 25,
                         ),
                         SizedBox(
@@ -186,7 +198,7 @@ class TopBar extends StatelessWidget {
                         Text(
                           "Melodie",
                           style: TextStyle(
-                              color: Colors.white,
+                              color: theme['foreground1'],
                               decoration: TextDecoration.none,
                               fontSize: 15),
                         ),

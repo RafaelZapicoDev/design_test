@@ -25,7 +25,7 @@ class Dashboard extends StatelessWidget {
                 ),
               ),
             ],
-            color: theme['contentbackground'],
+            color: theme['background2'],
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -34,7 +34,7 @@ class Dashboard extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 20, right: 20, top: 8),
                 child: Divider(
-                  color: theme['grey2'],
+                  color: theme['background 3'],
                 ),
               ),
               Expanded(
