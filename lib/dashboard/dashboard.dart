@@ -31,12 +31,12 @@ class Dashboard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               DashboardTopBar(),
-              Padding(
-                padding: const EdgeInsets.only(left: 20, right: 20, top: 8),
-                child: Divider(
-                  color: theme['background 3'],
-                ),
-              ),
+              // Padding(
+              //   padding: const EdgeInsets.only(left: 20, right: 20, top: 8),
+              //   child: Divider(
+              //     color: theme['background 3'],
+              //   ),
+              // ),
               Expanded(
                 flex: 9,
                 child: Container(

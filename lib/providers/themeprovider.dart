@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class ThemeProvider with ChangeNotifier {
   final Map<String, Color> _defaultTheme = {
-    'main': Color.fromARGB(255, 61, 123, 216),
+    //(255, 82, 140, 226)
+    'main': Color.fromARGB(255, 82, 140, 226),
     'foreground1': Color.fromARGB(255, 255, 255, 255),
     'foreground2': Color.fromARGB(180, 49, 95, 163),
     'foreground3': Color.fromARGB(157, 112, 137, 153),

@@ -29,22 +29,25 @@ class Standart extends StatelessWidget {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.875,
                 child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 12),
                   color: theme['background1'],
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Expanded(
-                        flex: 1,
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.12,
                         child: LeftMenu(),
                       ),
                       SizedBox(
-                        width: 20,
+                        width: 15,
                       ),
-                      Expanded(flex: 5, child: Dashboard()),
+                      Expanded(
+                        flex: 5,
+                        child: Dashboard(),
+                      ),
                       uiprovider.getfiltersVisibility
                           ? SizedBox(
-                              width: 20,
+                              width: 15,
                             )
                           : SizedBox(),
                       uiprovider.getfiltersVisibility
@@ -52,12 +55,6 @@ class Standart extends StatelessWidget {
                               flex: 1,
                               child: FiltersTab(),
                             )
-                          // .animate().slideX(
-                          //     begin: 1,
-                          //     end: 0,
-                          //     duration: 500.ms,
-                          //     curve: Curves.fastEaseInToSlowEaseOut,
-                          //   )
                           : SizedBox(),
                     ],
                   ),

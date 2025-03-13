@@ -1,6 +1,6 @@
+import 'package:design_test/authpage.dart';
 import 'package:design_test/providers/themeprovider.dart';
 import 'package:design_test/providers/uiprovider.dart';
-import 'package:design_test/standart.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -22,7 +22,7 @@ class MainApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Amwal Smart Manager',
-      home: Standart(),
+      home: AuthWidget(),
     );
   }
 }

@@ -48,12 +48,12 @@ class LeftMenu extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         SizedBox(
-                          width: 35,
+                          width: 32,
                         ),
                         Icon(
                           Icons.auto_awesome,
                           color: Colors.white,
-                          size: 25,
+                          size: 20,
                         ),
                         SizedBox(
                           width: 15,
@@ -64,7 +64,7 @@ class LeftMenu extends StatelessWidget {
                               color: const Color.fromARGB(255, 255, 255, 255),
                               decoration: TextDecoration.none,
                               fontWeight: FontWeight.w500,
-                              fontSize: 20),
+                              fontSize: 18),
                         ),
                       ],
                     ),
@@ -129,7 +129,7 @@ class LeftMenu extends StatelessWidget {
                           color: theme['foreground2'],
                           decoration: TextDecoration.none,
                           fontWeight: FontWeight.w500,
-                          fontSize: 20),
+                          fontSize: 18),
                     ),
                     Expanded(
                         child: Align(
@@ -141,7 +141,7 @@ class LeftMenu extends StatelessWidget {
                       ),
                     )),
                     SizedBox(
-                      width: 20,
+                      width: 18,
                     )
                   ],
                 ),

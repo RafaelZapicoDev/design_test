@@ -26,14 +26,14 @@ class DashboardTopBar extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Expanded(
-                  flex: 3,
+                  flex: 1,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Container(
                         width: 160,
-                        height: 40,
+                        height: 35,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           border: Border.fromBorderSide(
@@ -44,11 +44,11 @@ class DashboardTopBar extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             SizedBox(
-                              width: 10,
+                              width: 15,
                             ),
                             Icon(
                               Icons.add_outlined,
-                              size: 30,
+                              size: 25,
                               color: theme['foreground2'],
                             ),
                             SizedBox(
@@ -57,7 +57,7 @@ class DashboardTopBar extends StatelessWidget {
                             Text(
                               "Novo Item",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 17,
                                   color: theme['foreground2'],
                                   decoration: TextDecoration.none),
                             ),
@@ -69,7 +69,7 @@ class DashboardTopBar extends StatelessWidget {
                       ),
                       Container(
                         width: 120,
-                        height: 40,
+                        height: 35,
                         decoration: BoxDecoration(
                           color: theme['background3'],
                           borderRadius: BorderRadius.circular(10),
@@ -79,7 +79,7 @@ class DashboardTopBar extends StatelessWidget {
                             child: Text(
                               "Resumo",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 17,
                                   color: theme['foreground3'],
                                   decoration: TextDecoration.none),
                             )),
@@ -89,7 +89,7 @@ class DashboardTopBar extends StatelessWidget {
                       ),
                       Container(
                         width: 120,
-                        height: 40,
+                        height: 35,
                         decoration: BoxDecoration(
                           color: theme['background3'],
                           borderRadius: BorderRadius.circular(10),
@@ -99,7 +99,7 @@ class DashboardTopBar extends StatelessWidget {
                             child: Text(
                               "Insights",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 17,
                                   color: theme['foreground3'],
                                   decoration: TextDecoration.none),
                             )),
@@ -110,20 +110,20 @@ class DashboardTopBar extends StatelessWidget {
                       Icon(
                         Icons.more_vert,
                         color: theme['foreground3'],
-                        size: 35,
+                        size: 30,
                       ),
                     ],
                   ),
                 ),
                 Expanded(
-                  flex: 2,
+                  flex: 1,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Container(
                         width: 300,
-                        height: 40,
+                        height: 35,
                         decoration: BoxDecoration(
                           color: theme['background3'],
                           borderRadius: BorderRadius.circular(10),
@@ -134,7 +134,7 @@ class DashboardTopBar extends StatelessWidget {
                               alignment: Alignment.centerRight,
                               child: Icon(
                                 Icons.search,
-                                size: 30,
+                                size: 27,
                                 color: theme['foreground3'],
                               )),
                         ),
@@ -150,7 +150,7 @@ class DashboardTopBar extends StatelessWidget {
                               uiprovider.getfiltersVisibility
                                   ? Icons.filter_alt_off
                                   : Icons.filter_alt,
-                              size: 35,
+                              size: 30,
                               color: theme['foreground3'],
                             ),
                           );
@@ -161,7 +161,7 @@ class DashboardTopBar extends StatelessWidget {
                       ),
                       Icon(
                         Icons.refresh,
-                        size: 35,
+                        size: 30,
                         color: theme['foreground3'],
                       ),
                     ],
