@@ -8,4 +8,12 @@ class UiProvider with ChangeNotifier {
     _filtersVisibility = !_filtersVisibility;
     notifyListeners();
   }
+
+  bool _signinsignup = true;
+  bool get getsigninsignup => _signinsignup;
+
+  void togglesigninsignup() {
+    _signinsignup = !_signinsignup;
+    notifyListeners();
+  }
 }
