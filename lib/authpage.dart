@@ -1,5 +1,6 @@
 import 'package:design_test/providers/themeprovider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 
 class AuthWidget extends StatelessWidget {
@@ -69,7 +70,7 @@ class AuthWidget extends StatelessWidget {
                         ),
                         child: Padding(
                           padding: const EdgeInsets.symmetric(
-                              horizontal: 60, vertical: 40),
+                              horizontal: 60, vertical: 30),
                           child: Column(
                             children: [
                               SizedBox(
@@ -79,7 +80,6 @@ class AuthWidget extends StatelessWidget {
                                 flex: 1,
                                 child: SizedBox(
                                   width: 250,
-                                  height: 60,
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     crossAxisAlignment:
@@ -127,11 +127,8 @@ class AuthWidget extends StatelessWidget {
                                   ),
                                 ),
                               ),
-                              SizedBox(
-                                height: 30,
-                              ),
                               Expanded(
-                                flex: 8,
+                                flex: 7,
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
@@ -285,26 +282,65 @@ class AuthWidget extends StatelessWidget {
                                     SizedBox(
                                       width: 400,
                                       height: 50,
-                                      child: Container(
-                                        decoration: BoxDecoration(
-                                            borderRadius:
-                                                BorderRadius.circular(5),
-                                            color: theme['background']),
-                                        child: Center(
-                                          child: Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            children: [
-                                              Text("or continue with",
-                                                  style: TextStyle(
-                                                      decoration:
-                                                          TextDecoration.none,
-                                                      color:
-                                                          theme['background2'],
-                                                      fontSize: 20))
-                                            ],
+                                      child: Row(
+                                        children: <Widget>[
+                                          Expanded(
+                                              child: Divider(
+                                            height: 1,
+                                            color: theme['foreground3'],
+                                            endIndent: 15,
+                                          )),
+                                          Text("OR",
+                                              style: TextStyle(
+                                                  fontSize: 16,
+                                                  color: theme['foreground3'],
+                                                  decoration:
+                                                      TextDecoration.none)),
+                                          Expanded(
+                                            child: Divider(
+                                              height: 1,
+                                              indent: 15,
+                                              color: theme['foreground3'],
+                                            ),
                                           ),
-                                        ),
+                                        ],
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 30,
+                                    ),
+                                    SizedBox(
+                                      width: 400,
+                                      height: 50,
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceAround,
+                                        children: [
+                                          SizedBox(
+                                            height: 50,
+                                            width: 50,
+                                            child: IconButton(
+                                                onPressed: () {},
+                                                icon: SvgPicture.asset(
+                                                    'google.svg')),
+                                          ),
+                                          SizedBox(
+                                            height: 50,
+                                            width: 50,
+                                            child: IconButton(
+                                                onPressed: () {},
+                                                icon: SvgPicture.asset(
+                                                    'bluesky.svg')),
+                                          ),
+                                          SizedBox(
+                                            height: 50,
+                                            width: 50,
+                                            child: IconButton(
+                                                onPressed: () {},
+                                                icon: SvgPicture.asset(
+                                                    'twitter.svg')),
+                                          ),
+                                        ],
                                       ),
                                     ),
                                   ],
