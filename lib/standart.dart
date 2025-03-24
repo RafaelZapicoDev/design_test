@@ -6,7 +6,6 @@ import 'package:design_test/providers/themeprovider.dart';
 import 'package:design_test/providers/uiprovider.dart';
 import 'package:design_test/topbar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 import 'package:provider/provider.dart';
 
 class Standart extends StatelessWidget {

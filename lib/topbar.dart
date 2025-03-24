@@ -1,6 +1,5 @@
 import 'package:design_test/providers/themeprovider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 import 'package:provider/provider.dart';
 
 class TopBar extends StatelessWidget {
@@ -30,7 +29,7 @@ class TopBar extends StatelessWidget {
                         width: 15,
                       ),
                       Text(
-                        "ASM",
+                        "Amwal Smart",
                         style: TextStyle(
                             color: theme['foreground1'],
                             decoration: TextDecoration.none,
